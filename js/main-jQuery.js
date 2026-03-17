@@ -21,6 +21,7 @@ $(function () {
   }
   //開始後
   function startAfter() {
+    clearInterval(timeId);
     $(".font").hide();
     $("h1").hide();
     $("#btn").hide();
@@ -97,6 +98,11 @@ $(function () {
           startTime();
           buildBoard();
         } else if (result.dismiss === Swal.DismissReason.cancel) {
+          clearInterval(timeId); // <--- 確保回到首頁時，計時器是停止的
+          n = 2; // 順便重設難度
+          timeOut = 60; // 順便重設時間
+          // ...
+          startBefore();
           setTimeout(() => {
             Swal.fire({
               title: "已退出遊戲",
@@ -156,6 +162,7 @@ $(function () {
               title: "已退出遊戲",
               text: "感謝遊玩！",
             });
+
             startBefore();
             $(".font").show();
             $("h1").show();
