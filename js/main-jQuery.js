@@ -101,6 +101,7 @@ $(function () {
           clearInterval(timeId); // <--- 確保回到首頁時，計時器是停止的
           n = 2; // 順便重設難度
           timeOut = 60; // 順便重設時間
+          score = 0;
           // ...
           startBefore();
           setTimeout(() => {
