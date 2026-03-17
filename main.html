@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/main-jQuery.js"></script>
+    <link rel="stylesheet" href="./CSS/sweetalert2.css" />
+    <link rel="stylesheet" href="./CSS/main.css" />
+
+    <title>色弱測試</title>
+  </head>
+  <body>
+    <!-- 初始畫面 -->
+
+    <h1>色弱測試</h1>
+    <p class="font">找出一個不同於其他顏色的方塊</p>
+    <p class="font">Find a block that is different from the others.</p>
+    <div>
+      <button type="submit" id="btn">Start</button>
+    </div>
+    <div>
+      <button id="top1">最高分數</button>
+    </div>
+
+    <!-- 跳轉後畫面 -->
+    <p id="scores">分數:<span id="scoresValue">0</span></p>
+    <p id="time">時間:<span>60</span></p>
+
+    <div class="nxnbox" id="game">
+      <div class="inside">
+        <!-- 改變inside的grid 從2x2開始  每次+1 3x3 4x4 ...-->
+        <button class="inside-btn"></button>
+        <button class="inside-btn"></button>
+        <button class="inside-btn"></button>
+        <button class="inside-btn"></button>
+      </div>
+    </div>
+    <button id="restart">重新開始</button>
+    <button id="removeScore">清除最高分數</button>
+  </body>
+</html>
